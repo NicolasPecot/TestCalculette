@@ -48,7 +48,8 @@
         android:text="@string/plus"
         android:id="@+id/bouton_plus"
         android:layout_alignBottom="@+id/bouton_9"
-        android:layout_toEndOf="@+id/bouton_9" />
+        android:layout_toEndOf="@+id/bouton_9"
+        android:onClick="operateNombres" />
 
     <Button
         android:layout_width="wrap_content"
@@ -80,7 +81,8 @@
         android:text="@string/moins"
         android:id="@+id/bouton_moins"
         android:layout_alignBottom="@+id/bouton_6"
-        android:layout_toEndOf="@+id/bouton_6" />
+        android:layout_toEndOf="@+id/bouton_6"
+        android:onClick="operateNombres" />
 
     <Button
         android:layout_width="wrap_content"
@@ -113,7 +115,8 @@
         android:text="@string/multi"
         android:id="@+id/bouton_multi"
         android:layout_alignBottom="@+id/bouton_3"
-        android:layout_toEndOf="@+id/bouton_3" />
+        android:layout_toEndOf="@+id/bouton_3"
+        android:onClick="operateNombres" />
 
     <Button
         android:layout_width="wrap_content"
@@ -121,7 +124,8 @@
         android:text="@string/ce"
         android:id="@+id/bouton_ce"
         android:layout_below="@+id/bouton_1"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="resetClick" />
 
     <Button
         android:layout_width="wrap_content"
@@ -147,7 +151,8 @@
         android:text="@string/divi"
         android:id="@+id/bouton_div"
         android:layout_alignBottom="@+id/bouton_point"
-        android:layout_toEndOf="@+id/bouton_point" />
+        android:layout_toEndOf="@+id/bouton_point"
+        android:onClick="operateNombres" />
 
     <Button
         android:layout_width="wrap_content"
@@ -156,7 +161,8 @@
         android:id="@+id/bouton_result"
         android:layout_below="@+id/bouton_ce"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/bouton_div" />
+        android:layout_alignEnd="@+id/bouton_div"
+        android:onClick="egal" />
 
     <Button
         android:layout_width="wrap_content"

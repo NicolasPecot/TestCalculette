@@ -89,27 +89,56 @@ public class CalcActivity extends Activity {
         ecran.setText(str);
     }
 
-    public String addNombres(View view){
-        if (clickOperateur){
-
+    public void calcul(){
+        if ("+".equals(operateur)){
+            chiffre1 = chiffre1 + Double.valueOf(ecran.getText().toString());
+            ecran.setText(String.valueOf(chiffre1));
         }
-        operationCourante = "+";
-        return operationCourante;
+
+        if ("-".equals(operateur)){
+            chiffre1 = chiffre1 - Double.valueOf(ecran.getText().toString());
+            ecran.setText(String.valueOf(chiffre1));
+        }
+
+        if ("*".equals(operateur)){
+            chiffre1 = chiffre1 * Double.valueOf(ecran.getText().toString());
+            ecran.setText(String.valueOf(chiffre1));
+        }
+
+        if ("/".equals(operateur)){
+            try{
+                chiffre1 = chiffre1 / Double.valueOf(ecran.getText().toString());
+                ecran.setText(String.valueOf(chiffre1));
+            }catch(ArithmeticException e){
+                ecran.setText("0");
+            }
+        }
     }
 
-    public String soustNombres(View view){
-        operationCourante = "-";
-        return operationCourante;
+    public void operateNombres(View view){
+        if (clickOperateur){
+            calcul();
+            ecran.setText(String.valueOf(chiffre1));
+        } else {
+            chiffre1 = Double.valueOf(ecran.getText().toString());
+            clickOperateur = true;
+        }
+        operateur = ((Button) view).getText().toString();
+        update = true;
     }
 
-    public String multNombres(View view){
-        operationCourante = "*";
-        return operationCourante;
+    public void egal(View view){
+        calcul();
+        update = true;
+        clickOperateur = false;
     }
 
-    public String divNombres(View view){
-        operationCourante = "/";
-        return operationCourante;
+    public void resetClick(){
+        clickOperateur = false;
+        update = true;
+        chiffre1 = 0;
+        operateur = "";
+        ecran.setText("");
     }
 
     public String resultat(){
