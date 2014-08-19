@@ -21,5 +21,6 @@
     <string name="multi">*</string>
     <string name="divi">/</string>
     <string name="resultat">=</string>
+    <string name="memory">Mémoire</string>
 
 </resources>
