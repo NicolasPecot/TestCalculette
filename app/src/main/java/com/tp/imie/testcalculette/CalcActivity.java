@@ -12,10 +12,6 @@ import android.widget.EditText;
 
 public class CalcActivity extends Activity {
 
-    public String nombreCourant = "0";
-    public String nombreEnregistre = "0";
-    public String operationCourante = "+";
-
     public Button bouton_0;
     public Button bouton_1;
     public Button bouton_2;
@@ -148,19 +144,4 @@ public class CalcActivity extends Activity {
         ecran.setText("");
     }
 
-    public String resultat(){
-        if (operationCourante == "+"){
-            return String.valueOf(Integer.parseInt(nombreCourant) + Integer.parseInt(nombreEnregistre));
-        }
-        if (operationCourante == "-"){
-            return String.valueOf(Integer.parseInt(nombreCourant) - Integer.parseInt(nombreEnregistre));
-        }
-        if (operationCourante == "*"){
-            return String.valueOf(Integer.parseInt(nombreCourant) * Integer.parseInt(nombreEnregistre));
-        }
-        if (operationCourante == "/"){
-            return String.valueOf(Integer.parseInt(nombreCourant) / Integer.parseInt(nombreEnregistre));
-        }
-        return null;
-    }
 }
