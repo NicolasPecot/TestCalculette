@@ -2,6 +2,7 @@ package com.tp.imie.testcalculette;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -83,6 +84,7 @@ public class CalcActivity extends Activity {
 
     public void afficherChiffre(View view){
         String str = ((Button) view).getText().toString();
+        Log.i("appui touche", str);
         if (!"0".equals(ecran.getText().toString())){
             str = ecran.getText() + str;
         }
@@ -116,14 +118,19 @@ public class CalcActivity extends Activity {
     }
 
     public void operateNombres(View view){
+
         if (clickOperateur){
+            Log.i("operationNombre", String.valueOf(clickOperateur));
             calcul();
             ecran.setText(String.valueOf(chiffre1));
         } else {
+            Log.i("operationNombre", String.valueOf(clickOperateur));
             chiffre1 = Double.valueOf(ecran.getText().toString());
             clickOperateur = true;
+            ecran.setText("");
         }
         operateur = ((Button) view).getText().toString();
+        Log.i("appui touche", operateur);
         update = true;
     }
 
@@ -133,7 +140,7 @@ public class CalcActivity extends Activity {
         clickOperateur = false;
     }
 
-    public void resetClick(){
+    public void resetClick(View view){
         clickOperateur = false;
         update = true;
         chiffre1 = 0;
