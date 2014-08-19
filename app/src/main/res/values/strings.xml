@@ -24,4 +24,7 @@
     <string name="memory">Mémoire</string>
     <string name="title_activity_memory">MemoryActivity</string>
 
+    <string name="dates_operations">Dates Operations</string>
+    <string name="operations">Operations</string>
+
 </resources>
