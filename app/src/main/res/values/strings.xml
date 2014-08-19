@@ -15,5 +15,11 @@
     <string name="neuf">9</string>
     <string name="zero">0</string>
     <string name="virgule">.</string>
+    <string name="ce">CE</string>
+    <string name="plus">+</string>
+    <string name="moins">-</string>
+    <string name="multi">*</string>
+    <string name="divi">/</string>
+    <string name="resultat">=</string>
 
 </resources>
