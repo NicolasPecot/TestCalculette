@@ -22,5 +22,6 @@
     <string name="divi">/</string>
     <string name="resultat">=</string>
     <string name="memory">Mémoire</string>
+    <string name="title_activity_memory">MemoryActivity</string>
 
 </resources>
