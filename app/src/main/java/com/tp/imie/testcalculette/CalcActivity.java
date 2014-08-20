@@ -116,11 +116,9 @@ public class CalcActivity extends Activity {
     public void operateNombres(View view){
 
         if (clickOperateur){
-            Log.i("operationNombre", String.valueOf(clickOperateur));
             calcul();
             ecran.setText(String.valueOf(chiffre1));
         } else {
-            Log.i("operationNombre", String.valueOf(clickOperateur));
             chiffre1 = Double.valueOf(ecran.getText().toString());
             clickOperateur = true;
             ecran.setText("");
